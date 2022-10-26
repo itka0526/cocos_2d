@@ -35,6 +35,16 @@ try {
                     "Content-Encoding": "gzip",
                     "Content-Type": "application/javascript",
                 });
+            } else if (file_path.endsWith(".wasm.br")) {
+                res.writeHead(200, {
+                    "Content-Encoding": "br",
+                    "Content-Type": "application/wasm",
+                });
+            } else if (file_path.endsWith(".br")) {
+                res.writeHead(200, {
+                    "Content-Encoding": "br",
+                    "Content-Type": "application/javascript",
+                });
             }
 
             fs.createReadStream(path.join(__dirname, "/demo", file_path)).pipe(
