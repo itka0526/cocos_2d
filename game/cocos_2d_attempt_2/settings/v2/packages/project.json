@@ -1,0 +1,32 @@
+{
+  "physics": {
+    "gravity": {
+      "y": 0
+    },
+    "collisionGroups": [
+      {
+        "index": 1,
+        "name": "Player"
+      },
+      {
+        "index": 2,
+        "name": "Objects"
+      }
+    ],
+    "collisionMatrix": {
+      "0": 1,
+      "1": 2,
+      "2": 4
+    }
+  },
+  "general": {
+    "designResolution": {
+      "fitHeight": true,
+      "height": 320,
+      "width": 512
+    }
+  },
+  "script": {
+    "loose": true
+  }
+}
